@@ -114,4 +114,17 @@ do_patterns = function(pat_sub, all_cols) {
 edit.data.table = function(name, ...) {
   setDT(NextMethod('edit', name))[]
 }
+
+
+add_dot_equal <- function() {
+  rstudioapi::insertText(text = "`:=`()")
+  pos <- rstudioapi::getActiveDocumentContext()$selection[[1]]$range
+  pos$start[2] <- pos$start[2] - 1
+  pos$end[2] <- pos$end[2] - 1
+  rstudioapi::setCursorPosition(pos)
+  
+}
+
 # nocov end
+
+

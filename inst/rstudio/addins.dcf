@@ -1,0 +1,5 @@
+Name: Insert `:=`
+Description: Inserts functional version of :=
+Binding: add_dot_equal
+Interactive: false
+
